@@ -1,91 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" class="is-smooth-scroll-compatible has-scroll-init has-scroll-smooth">
+<html lang="en" class="is-smooth-scroll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./assets/lib/locomotive-scroll.min.css">
-  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/lib/locomotive-scroll.min.css" />
+  <link rel="stylesheet" href="./assets/styles/style.css" />
 </head>
 
-<body data-scroll-container>
-  <header>
-    <h1 data-scroll data-scroll-speed="5" data-scroll-direction="horizontal" data-scroll-offset="100,50">Jean Scratch
-    </h1>
-    <h2 data-scroll data-scroll-speed="-50" data-scroll-direction="horizontal">Développeur Front-end</h2>
-  </header>
-  <section class="section1">
-    <img src="./assets/img/bill-gates-1.jpg" alt="image Jean Scratch">
-    <h2>A propos</h2>
-    <p data-scroll>JE SUIS PLUS PRÉCISÉMENT DESIGNER SENIOR ET ARTISAN NUMÉRIQUE. J’ACCOMPAGNE
-      LES PROFESSIONNELS DANS
-      LE DÉVELOPPEMENT DE LEUR IDENTITÉ, DE LEUR SITE WEB, POUR LA MISE EN VALEUR DE LEURS SAVOIR-FAIRE ET DE LEURS
-      CRÉATIONS. JE SUIS AUSSI
-      LE CO-FONDATEUR DE
-      TYPE8 STUDIO</p>
-  </section>
+<body>
+  <div data-scroll-container>
+    <header data-scroll class="c-header">
+      <div class="links">
+        <a href="#portfolio" data-scroll-to>portfolio</a>
+        <a href="mailto:jeanscratch@gmail.com">contact</a>
+      </div>
+      <div class="wrapper">
+        <div data-scroll class="appear">
+          <h1 data-scroll data-scroll-speed="6" data-scroll-position="left" data-scroll-direction="horizontal">
+            Jean Scratch
+          </h1>
+        </div>
+      </div>
+      <div data-scroll data-scroll-repeat="true" class="wrapper" id="color">
+        <div data-scroll class="appear" id="h2-1">
+          <h2 data-scroll data-scroll-speed="-6" data-scroll-position="left" data-scroll-direction="horizontal">
+            Développeur
+          </h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div data-scroll class="appear" id="h2-2">
+          <h2 data-scroll data-scroll-speed="-12" data-scroll-position="left" data-scroll-direction="horizontal">
+            Front-end
+          </h2>
+        </div>
+      </div>
+      <div class="scroll-wrapper">
+        <p data-scroll data-scroll-speed="1" data-scroll-position="top">
+          please scroll
+        </p>
+      </div>
+    </header>
 
-  <div>Expert de l’image, je suis le garant de sa performance. Elle répond à des objectifs très concrets :
-    progression
-    du taux de conversion et accroissement de la notoriété. Mes clients évoluent principalement dans les secteurs de
-    l’événementiel, de la culture (musiciens, labels de musique, etc.), de la mode (stylisme) et de l’artisanat
-    d’art.
-    J’aime entretenir un rapport privilégié et direct avec eux, propice à l’écoute et à la confiance, l’inscrire sur
-    le
-    long terme.
+    <section class="about">
+      <div data-scroll data-scroll-speed="-1" class="img1-wrapper">
+        <div class="img img1"></div>
+      </div>
+      <div class="h2-wrapper" data-scroll data-scroll-speed="3">
+        <h2>À propos</h2>
+      </div>
 
-    Chaque professionnel fait l’objet d’une approche personnalisée. Ensemble, nous définissons les enjeux et les
-    besoins. Je réalise ensuite un audit des forces et faiblesses à partir duquel je définis une stratégie de
-    moyens.
-    Penser une expérience utilisateur innovante, qui s’inscrive dans une cohérence visuelle globale est une priorité
-    pour moi.
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aliquam iusto delectus architecto aut, at, a
+        doloremque voluptatibus hic mollitia nemo commodi harum rem. Eos quis ratione in. Voluptas suscipit fugiat,
+        reprehenderit recusandae voluptatum rem porro dolor ut sapiente eligendi in doloribus odio non impedit
+        repellendus, incidunt quis at minima dignissimos. Aperiam dignissimos nihil accusantium impedit? Iste quidem
+        officiis magnam harum quisquam atque, cum laboriosam, tempora alias molestiae minus quas, perspiciatis nostrum
+        architecto soluta voluptatibus hic nulla fugit animi qui.
+      </p>
+    </section>
 
-    Le design que j’aime est minimaliste, efficace, sobre, délicat, avec une affection particulière pour la
-    typographie.
-    Il accompagne votre activité, votre changement d’image, tout en conservant votre identité. Je suis également
-    intervenant à
-    sup de pub et simplon dans divers domaines telle que la Direction Artistique digitale, l’UI – l’UX.
+    <div class="line-wrapper" data-scroll data-scroll-speed="1" data-scroll-position="top">
+      <div class="line"></div>
+    </div>
 
-    Je collabore avec d’autre expert dans leurs domaines: photographie (oram Dannreuther, kliché! studio)
-    développement
-    (Jeremy Fagis, Thomas Aufresne,
-    Maxime Bérard) illustration (Benoit Drigny),
-    pour proposer une expérience toujours plus qualitative.</div>
+    <section class="skills">
+      <h2>expertises</h2>
+      <div class="wrapper">
+        <div data-scroll class="appear">
+          <p data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal">art
+            direction</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div data-scroll class="appear">
+          <p data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">digital
+            design</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div data-scroll class="appear">
+          <p data-scroll data-scroll-speed="-5" data-scroll-direction="horizontal">brand
+            identity</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div data-scroll class="appear">
+          <p data-scroll data-scroll-speed="-6" data-scroll-direction="horizontal">ui - ux
+            design</p>
+        </div>
+      </div>
+    </section>
 
+    <div class="line-wrapper line2" data-scroll data-scroll-speed="1" data-scroll-position="top">
+      <div class="line"></div>
+    </div>
 
-  <section class="section2">
-    <h2>expertises</h2>
-    <p data-scroll>art direction</p>
-    <p data-scroll>digital design</p>
-    <p data-scroll>brand identity</p>
-    <p data-scroll>ui - ux design</p>
-  </section>
+    <section data-scroll class="portfolio">
+      <h2 id="portfolio">Portfolio</h2>
 
-  <hr>
+    </section>
 
-  <section class="section3">
-    <h2>Portfolio</h2>
+    <div class="line-wrapper line3" data-scroll data-scroll-speed="1" data-scroll-position="top">
+      <div class="line"></div>
+    </div>
 
-  </section>
-
-  <footer>
-    <img src="./assets/img/bill-gates-2.jpg" alt="image Jean Scratch">
-    <p data-scroll>Vous avez un projet ?<br>
-      Je serai ravi d’en discuter<br>
-      avec vous.</p>
-  </footer>
-
+    <footer data-scroll>
+      <div class="wrapper">
+        <div data-scroll class="appear">
+          <p>Vous avez un projet ?</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div data-scroll id="p2" class="appear">
+          <p>Je serai ravi d’en <a href="mailto:jeanscratch@gmail.com">discuter</a></p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div data-scroll id="p3" class="appear">
+          <p>avec vous.</p>
+        </div>
+      </div>
+      <div data-scroll data-scroll-speed="3" class="img-wrapper">
+        <div class="img img2"></div>
+      </div>
+      <br><br><br><br>
+    </footer>
 
   </div>
 
-
-  </div>
-
-  <script src=" ./assets/lib/locomotive-scroll.min.js"> </script>
-  <script src="./assets/js/index.js">
-  </script>
+  <script src=" ./assets/lib/locomotive-scroll.min.js"></script>
+  <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
