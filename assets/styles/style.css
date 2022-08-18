@@ -13,6 +13,9 @@ h2 {
   text-align: center;
   color: rgb(217, 217, 217);
 }
+span {
+  display: inline-block;
+}
 a {
   cursor: pointer;
   position: relative;
@@ -84,7 +87,7 @@ a:hover::after {
   background: #000101;
   opacity: 0;
   transform: scaleX(0);
-  transition: 1.2s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: 0.7s cubic-bezier(0.77, 0, 0.18, 1);
   transform-origin: left;
 }
 .line-wrapper.is-inview .line {
@@ -149,7 +152,7 @@ header p {
   color: rgb(217, 217, 217);
 }
 .about {
-  margin: 400px 0 500px;
+  margin: 400px 0 250px;
 }
 .img1-wrapper {
   z-index: 2;
@@ -177,9 +180,8 @@ header p {
   line-height: 50px;
   font-size: 1.5rem;
 }
-
 .skills {
-  margin-bottom: 300px;
+  margin: 300px 0 150px;
 }
 .skills h2 {
   margin-bottom: 150px;
@@ -192,26 +194,76 @@ header p {
   text-align: center;
   animation-delay: 0.2s !important;
 }
-.line2 {
-  margin: 600px 0 0px;
-}
 .portfolio {
-  margin-top: -180px;
+  margin: 250px 0 200px;
 }
-.line3 {
-  margin: 500px 0 0;
+.projects-container {
+  margin: 100px 0 0;
 }
-
+.project {
+  position: relative;
+  width: 60vw;
+  max-width: 600px;
+  margin: 30px 5vw;
+}
+.project::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fefeff;
+  transition: width 1s;
+}
+.project.is-inview::before {
+  width: 0;
+}
+#p2 {
+  transition-delay: 1.4s;
+  margin: 0 6vw 0 auto;
+}
+#p3 {
+  transition-delay: 1.8s;
+  margin-left: 8vw;
+}
+.project img {
+  transition: 0.4s ease-out;
+}
+.project:hover img {
+  filter: brightness(20%);
+}
+.project:hover .project-infos {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.project-infos {
+  position: absolute;
+  top: 50%;
+  margin-left: 8vw;
+  transform: translate(-50px, -50%);
+  opacity: 0;
+  transition: 0.4s ease-out;
+}
+.project-infos a {
+  font-size: 3rem;
+}
+.project-infos p {
+  font-size: 2rem;
+  margin-top: 25px;
+  color: #fefeff;
+}
+footer {
+  margin-top: 100px;
+}
 footer p {
   font-size: 1.7rem;
   text-align: center;
   margin: 25px 0;
 }
-#p2 {
-  animation-delay: 0.8s;
+#l2 {
+  animation-delay: 1.2s;
 }
-#p3 {
-  animation-delay: 1.1s;
+#l3 {
+  animation-delay: 1.6s;
 }
 footer a {
   text-decoration: underline;
