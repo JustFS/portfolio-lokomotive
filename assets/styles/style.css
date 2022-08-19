@@ -1,34 +1,57 @@
 /* Paramètres généraux  */
-@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@font-face {
+  font-family: "font-reg";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "font-bold";
+  src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
+}
 
 * {
   padding: 0;
   margin: 0;
 }
+*::selection {
+  background: #000101;
+  color: #fefeff;
+}
 html {
   scroll-behavior: smooth;
 }
+body {
+  margin: 0 2vw;
+  font-family: "font-reg", serif;
+  background: #000101;
+  color: #fefeff;
+  transition: 0.7s ease-in-out;
+}
 h2 {
-  font-size: 7rem;
+  font-size: calc(3rem + 5vw);
   text-align: center;
   color: rgb(217, 217, 217);
+  font-family: "font-bold", serif;
+  letter-spacing: 3px;
+}
+.title {
+  font-size: calc(1.5rem + 5vw);
+  letter-spacing: 0;
 }
 span {
   display: inline-block;
 }
-a {
+a,
+a:visited {
   cursor: pointer;
   position: relative;
   text-decoration: none;
   color: #fefeff;
   transition: 0.1s linear;
-}
-a:visited {
-  color: #fefeff;
+  font-size: calc(0.8rem + 0.8vw);
 }
 a::after {
-  position: absolute;
   content: "";
+  position: absolute;
   width: 100%;
   height: 1px;
   background: #fefeff;
@@ -53,42 +76,40 @@ a:hover::after {
 }
 .img {
   height: 395px;
+  width: 100vw;
+  max-width: 395px;
   margin: 0 auto;
   filter: grayscale(100%);
-  transition: 2s;
+  transition: 1.6s;
 }
 .img:hover {
   filter: grayscale(10%);
 }
+.wrapper {
+  perspective: 900px;
+}
 .appear {
-  display: block;
   opacity: 0;
   transform: translateY(100%) rotateX(-80deg);
   transform-origin: top center;
   transform-style: preserve-3d;
-}
-.wrapper {
-  perspective: 600px;
-}
-@keyframes appear {
-  to {
-    opacity: 1;
-    transform: none;
-  }
+  transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .appear.is-inview {
-  animation: appear 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 0.4s;
+  transition-delay: 1s;
+  opacity: 1;
+  transform: none;
 }
 .line {
   height: 2px;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   background: #000101;
   opacity: 0;
   transform: scaleX(0);
-  transition: 0.7s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
   transform-origin: left;
+  transition-delay: 0.65s;
 }
 .line-wrapper.is-inview .line {
   opacity: 1;
@@ -96,60 +117,42 @@ a:hover::after {
 }
 
 /* Paramètres par ordre d'apparition CSS */
-body {
-  font-family: "Aboreto", cursive;
-  background: #000101;
-  color: #fefeff;
-  animation-delay: 0.5s;
-}
-@keyframes backBlack {
-  to {
-    background: #000101;
-    color: #fefeff;
-  }
-}
-@keyframes backWhite {
-  to {
-    background: #fefeff;
-    color: #000101;
-  }
-}
 header {
   min-height: 100vh;
   position: relative;
-  margin: 30px;
+  margin-top: 2vw;
 }
 .links {
   display: flex;
   justify-content: space-between;
 }
-.title {
-  line-height: -1000px;
+#h1-wrapper {
+  transition-delay: 0.3s;
 }
 h1 {
-  font-size: 8rem;
+  font-size: calc(2rem + 8vw);
   margin-top: 70px;
+  font-family: "font-bold", serif;
+  letter-spacing: 6px;
 }
 header h2 {
-  font-size: 6.5rem;
-  margin: 20px 0;
+  font-size: calc(1rem + 6.5vw);
+  margin: 18px 0;
   text-align: left;
 }
 #h2-1 {
-  animation-delay: 0.8s;
+  transition-delay: 0.9s;
 }
-
 #h2-2 {
-  animation-delay: 1s;
+  transition-delay: 1.2s;
 }
 .scroll-wrapper {
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: 3.5vw;
   transform: translateX(-50%);
-}
-header p {
   color: rgb(217, 217, 217);
+  font-size: calc(0.8rem + 0.5vw);
 }
 .about {
   margin: 400px 0 250px;
@@ -160,73 +163,82 @@ header p {
 }
 .img1 {
   background: url(../img/bill-gates-1.jpg) fixed top/cover;
-  width: 395px;
 }
 .h2-wrapper {
   mix-blend-mode: exclusion;
-  margin-top: -200px;
+  margin: -220px 0 200px;
   text-align: center;
   z-index: 10;
   position: relative;
-  margin-bottom: 200px;
 }
 .h2-wrapper h2 {
   color: rgb(196, 196, 196);
 }
 .about p {
-  max-width: 70%;
+  width: 70%;
+  min-width: 280px;
   text-align: center;
   margin: 0 auto;
-  line-height: 50px;
-  font-size: 1.5rem;
+  line-height: calc(7px + 4.5vw);
+  font-size: calc(1rem + 1vw);
+  letter-spacing: 1px;
 }
 .skills {
-  margin: 300px 0 150px;
+  margin: 200px 0 250px;
 }
 .skills h2 {
   margin-bottom: 150px;
 }
 .skills .wrapper {
-  margin: 70px 20px;
+  margin: 30px 0;
 }
 .skills .appear {
-  font-size: 5rem;
+  transition-delay: 0.6s;
   text-align: center;
-  animation-delay: 0.2s !important;
+}
+.skills p {
+  font-size: calc(1rem + 6vw);
+  font-family: "font-bold", serif;
+  letter-spacing: 4px;
+  background: #000101;
+  color: #fefeff;
+  display: inline-block;
+  padding: 0 12px 12px 12px;
 }
 .portfolio {
-  margin: 250px 0 200px;
+  margin: 200px 0;
 }
 .projects-container {
-  margin: 100px 0 0;
+  margin-top: 100px;
 }
 .project {
   position: relative;
   width: 60vw;
   max-width: 600px;
-  margin: 30px 5vw;
+  margin: 50px 5vw;
 }
 .project::before {
   content: "";
   position: absolute;
-  height: 100%;
+  height: 110%;
   width: 100%;
+  top: -3px;
   background: #fefeff;
-  transition: width 1s;
+  transition: width 1s ease-out;
+  transition-delay: 0.85s;
 }
 .project.is-inview::before {
   width: 0;
 }
 #p2 {
-  transition-delay: 1.4s;
   margin: 0 6vw 0 auto;
 }
 #p3 {
-  transition-delay: 1.8s;
   margin-left: 8vw;
 }
 .project img {
   transition: 0.4s ease-out;
+  width: 100%;
 }
 .project:hover img {
   filter: brightness(20%);
@@ -244,34 +256,33 @@ header p {
   transition: 0.4s ease-out;
 }
 .project-infos a {
-  font-size: 3rem;
+  font-size: calc(1rem + 3vw);
 }
 .project-infos p {
   font-size: 2rem;
-  margin-top: 25px;
+  margin-top: 1.5vw;
   color: #fefeff;
 }
 footer {
-  margin-top: 100px;
+  margin: 150px 0 120px;
 }
 footer p {
-  font-size: 1.7rem;
+  font-size: calc(1rem + 2vw);
   text-align: center;
   margin: 25px 0;
 }
 #l2 {
-  animation-delay: 1.2s;
+  transition-delay: 1.2s;
 }
 #l3 {
-  animation-delay: 1.6s;
+  transition-delay: 1.6s;
 }
 footer a {
   text-decoration: underline;
-  font-weight: 700;
+  font-family: "font-bold", serif;
   color: #000101;
+  font-size: calc(1rem + 2vw);
 }
 .img2 {
-  margin-top: -65px;
   background: url(../img/bill-gates-2.jpg) center/cover;
-  width: 395px;
 }
